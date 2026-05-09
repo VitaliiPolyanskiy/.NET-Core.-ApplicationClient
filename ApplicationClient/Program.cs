@@ -14,7 +14,7 @@ namespace Array
             Console.InputEncoding = Encoding.UTF8;
 
             // Завантажуємо збірку
-            Assembly asml = Assembly.LoadFrom("./SampleLibrary.dll");
+            Assembly asml = Assembly.LoadFrom("../../../SampleLibrary.dll");
 
             // Виводимо список типів даних, оголошених у поточному модулі
             Console.WriteLine("Оголошені типи даних:");
@@ -51,7 +51,7 @@ namespace Array
             // Викликаємо метод Print у створеного об'єкта
             type.GetMethod("Print").Invoke(person, null); // person.Print();
 
-            string[] files = Directory.GetFiles(".", "DLL/*.dll");
+            string[] files = Directory.GetFiles(".", "../../../DLL/*.dll");
             Assembly[] asm = new Assembly[files.Length];
 
             for (int i = 0; i < files.Length; i++)
